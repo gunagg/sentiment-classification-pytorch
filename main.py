@@ -169,7 +169,7 @@ def write_csv(model) :
 			y_pred,_ = model(input_data,hidden)
 			pred = y_pred.data.max(1)[1].cpu().numpy()[0]
 			print(pred)
-			f.write(str(i)+","+str(inverse_label_dict[pred])+"\n")
+			f.write(str(i+1)+","+str(inverse_label_dict[pred])+"\n")
 
 epochs = 5
 for epoch in range(epochs) :
